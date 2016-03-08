@@ -1,71 +1,106 @@
-/** 
- * Linear Gradient Mixin
- */
+///
+/// @name Linear Gradient Mixin
+/// A simple Sass (SCSS) Gradient Mixin that provides the ability to quickly add Linear and Radial CSS3 Gradients.
+/// @access public
+/// @author Asher Stoppard
+/// @todo Make filter: dynamic.
+/// @todo Add $reverse option for radial gradients.
+/// @todo Refactor and Refine coding.
+/// @todo Add example use and github page.
+/// @todo Complete further testing and establish appropriate browser stats.
+/// @todo Complete usage documentation.
+/// @todo Add sort order for color locations.
+/// @todo Refine @error messages and @warn messages.
+/// @todo Add appropriate comments to explain the code.
+///
 
 @mixin linear-gradient($direction, $reverse, $colors, $fallback) {
+  /**
+   * Set defaults
+   */
 	$webkitDirection: left bottom, left top !default;
 	$mainDirection: bottom !default;
 	$linearDirection: to top !default;
 	$mainColors: null !default;
 	$webkitColors: null !default;
  
+  // Loop through each color
 	@each $location, $color in $colors {
+	  // Add the color and location for the gradient string
 		$mainString: ', ' + $color + ' ' + $location;
+		// Append the strings to the $mainColors variable
 		$mainColors: append($mainColors, $mainString);
-
+		
+		/**
+		 * Website uses 'color-stop'
+		 * Apply a different string for -webkit-
+		 */
+		// Add the color and location for the gradient string
 		$webkitString: ', color-stop(' + $location + ',' + $color + ')';
+		// Append the strings to the $webkitColors variable
 		$webkitColors:append($webkitColors, $webkitString);
 	}
-
+  
+  // If gradient is horizontal
 	@if ($direction == horizontal) {
 		@if ($reverse) {
+		  // Apply appropriate syntax for browser prefixes
 			$webkitDirection: right top, left top;
 			$mainDirection: right;
 			$linearDirection: to left;
 		} @else {
+		  // Apply appropriate syntax for browser prefixes
 			$webkitDirection: left top, right top;
 			$mainDirection: left;
 			$linearDirection: to right;
 		}
 	} @else if ($direction == vertical) {
 		@if ($reverse) {
+			// Apply appropriate syntax for browser prefixes
 			$webkitDirection: left bottom, left top;
 			$mainDirection: bottom;
 			$linearDirection: to top;
 		} @else {
+		  // Apply appropriate syntax for browser prefixes
 			$webkitDirection: left top, left bottom;
 			$mainDirection: top;
 			$linearDirection: to bottom;
 		}
 	} @else if ($direction == diagonal-up) {
 		@if ($reverse) {
+		  // Apply appropriate syntax for browser prefixes
 			$webkitDirection: left bottom, right top;
 			$mainDirection: 225deg;
 			$linearDirection: -315deg;
 		} @else {
+		  // Apply appropriate syntax for browser prefixes
 			$webkitDirection: right top, left bottom;
 			$mainDirection: 45deg;
 			$linearDirection: -135deg;
 		}
 	} @else if ($direction == diagonal-down) {
 		@if ($reverse) {
+		  // Apply appropriate syntax for browser prefixes
 			$webkitDirection: right bottom, left top;
 			$mainDirection: -225deg;
 			$linearDirection: 315deg;
 		} @else {
+		  // Apply appropriate syntax for browser prefixes
 			$webkitDirection: left top, right bottom;
 			$mainDirection: -45deg;
 			$linearDirection: 135deg;
 		}
 	} @else if ($direction == radial) {
+		  // Apply appropriate syntax for browser prefixes
 		$webkitDirection: ellipse at center;
 		$mainDirection: center, ellipse cover;
 		$linearDirection:radial, center center, 0px, center center;
 	} @else {
+	  // If direction is not recognised throw an error
 		@error "Linear Gradient direction was not correctly defined.";
 	}
 
-
+  // apply linear as default
 	$type: linear;
 	@if ($direction == radial) {
 		$type: radial;
@@ -87,4 +122,112 @@
 
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000', endColorstr='#f4f4f4',GradientType=0 ); /* IE6-8 */
 
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	font-family: "Proxima Nova";
+	font-size: 1.4em;
+
+	margin: 0;
+
+	color: #333;
+}
+
+.wrapper {
+	width: 1500px;
+	max-width: 80%;
+	margin: 0 auto;
+}
+
+.primary-header {
+	width: 100%;
+	margin: 0 0 2em 0;
+	padding: 1.5em 0;
+
+	background: #f4f4f4;
+
+	h1 {
+		font-size: 2.5em;
+		font-weight: 400;
+
+		margin: 0;
+	}
+}
+
+.gradient-container {
+	float: left;
+
+	width: 20%;
+	padding-right: 3.5em;
+}
+
+article {
+	margin: 0 0 5em 0;
+}
+
+section.wrapper {
+
+	h2 {
+		font-weight: 600;
+	}
+}
+
+.gradient {
+	width: 100%;
+	padding-bottom: 100%;
+}
+
+/**
+ * Horizontal Gradient
+ */
+
+$grad-colors: (
+	0% : #03a9f4,
+	100% : #e91e63,
+);
+
+.horizontal-gradient {
+	@include linear-gradient(horizontal, false, $grad-colors, #e74c3c);
+}
+
+/**
+ * Vertical Gradient
+ */
+
+.vertical-gradient {
+	@include linear-gradient(vertical, false, $grad-colors, #e74c3c);
+}
+
+/**
+ * Diagonal Up Gradient
+ */
+
+.diagonal-up-gradient {
+	@include linear-gradient(diagonal-up, false, $grad-colors, #e74c3c);
+}
+
+/**
+ * Diagonal Down Gradient
+ */
+
+.diagonal-down-gradient {
+	@include linear-gradient(diagonal-down, false, $grad-colors, #e74c3c);
+}
+
+/**
+ * Radial Gradient
+ */
+
+.radial-gradient {
+	@include linear-gradient(radial, false, $grad-colors, #e74c3c);
 }
