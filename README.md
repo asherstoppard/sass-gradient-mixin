@@ -128,3 +128,4 @@ Coming Soon.
 ## Resources
 
 - [Colorzilla Gradient Creator](http://www.colorzilla.com/gradient-editor/) - The Sass Gradient Mixin was adapted from Colorzilla's CSS3 Gradient Creator.
+- [uiGradients](http://uigradients.com/) - Gradient examples were adopted from uiGradients online library.
