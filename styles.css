@@ -1,0 +1,51 @@
+*,
+*:before,
+*:after {
+	box-sizing: border-box;
+}
+
+body {
+	background: #f4f4f4;
+	font-weight: 400;
+	font-family: 'Montserrat', 'Helvetica Neue', 'Arial', sans-serif;
+	background: #480048;
+	background: -moz-linear-gradient(-45deg,  #480048 0%, #c04848 100%);
+	background: -webkit-linear-gradient(-45deg,  #480048 0%,#c04848 100%);
+	background: linear-gradient(135deg,  #480048 0%,#c04848 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#480048', endColorstr='#c04848',GradientType=1 );
+	color: white;
+}
+h1 {
+	font-size: 2.5em;
+}
+h2 {
+	font-weight: 400;
+	font-size: 1em;
+}
+
+.main-splash {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	width: 780px;
+	max-width: 100%;
+	text-align: center;
+	transform: translate(-50%, -50%);
+}
+
+.btn {
+	display: inline-block;
+	padding: 1em 2em;
+	border-radius: 5px;
+	background: #480048;
+	color: white;
+	text-decoration: none;
+	margin-top: 1em;
+}
+
+.copyright {
+	position: fixed;
+	bottom: 0.5em;
+	right: 1em;
+	font-size: 0.8em;
+}
