@@ -1,0 +1,26 @@
+{
+  "name": "sass-gradient-mixin",
+  "version": "1.0.0",
+  "homepage": "https://github.com/asherstoppard/sass-gradient-mixin",
+  "authors": [
+    "Asher Stoppard <asher@asherstoppard.com>"
+  ],
+  "description": "A simple Sass (SCSS) Gradient Mixin that provides the ability to quickly add Linear and Radial CSS3 Gradients.",
+  "keywords": [
+    "Sass",
+    "SCSS",
+    "Gradient",
+    "Mixin",
+    "Creator",
+    "Generator",
+    "CSS"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
