@@ -67,7 +67,7 @@ $sass-gradient-colors: (
 
 For more information and use cases please refer to the [Examples](#examples).
 
-###fallback
+###$fallback
 
 **Type:** color
 
