@@ -18,6 +18,50 @@ A simple Sass (SCSS) Gradient Mixin that provides the ability to quickly add Lin
 - Refine `@error` messages and `@warn` messages.
 - Add appropriate comments to explain the code.
 
+## Installation
+
+### Bower
+
+Install the package via bower:
+
+```sh
+bower install https://github.com/asherstoppard/sass-gradient-mixin
+```
+
+Then link to the `_sass-gradients.scss` partial:
+
+```scss
+@import 'path-to-your-bower-folder/sass-gradient-mixin/sass/sass-gradient-mixin';
+```
+
+> Package will be available via the Bower registry imminently.
+
+### NPM
+
+Install the package via NPM:
+
+```sh
+npm install https://github.com/asherstoppard/sass-gradient-mixin
+```
+
+Then link to the `_sass-gradients.scss` partial:
+
+```scss
+@import 'path-to-your-npm-folder/sass-gradient-mixin/sass/sass-gradient-mixin';
+```
+
+> Package will be available via the NPM registry imminently.
+
+### Manually
+
+Download the repository zip file, unzip and move `_sass-gradient-mixin.scss` (in the `/sass` folder) to the relevant location in your project.
+
+Then link to the `_sass-gradients.scss` partial:
+
+```scss
+@import 'path-to-your-folder/sass-gradient-mixin';
+```
+
 ## Usage
 
 The Sass Gradient Mixin accepts four variables. These are as follows:
