@@ -2,6 +2,8 @@
 
 # Sass Gradient Mixin
 
+<img src="http://img.shields.io/badge/CURRENT_VERSION-BETA-orange.svg">
+
 A simple Sass (SCSS) Gradient Mixin that provides the ability to quickly add Linear and Radial CSS3 Gradients.
 
 ## Roadmap
