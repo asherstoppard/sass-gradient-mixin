@@ -30,7 +30,7 @@ bower install https://github.com/asherstoppard/sass-gradient-mixin
 
 Then link to the `_sass-gradients.scss` partial:
 
-```SCSS
+```sass
 @import 'path-to-your-bower-folder/sass-gradient-mixin/sass/sass-gradient-mixin';
 ```
 
@@ -46,7 +46,7 @@ npm install https://github.com/asherstoppard/sass-gradient-mixin
 
 Then link to the `_sass-gradients.scss` partial:
 
-```SCSS
+```sass
 @import 'path-to-your-npm-folder/sass-gradient-mixin/sass/sass-gradient-mixin';
 ```
 
@@ -58,7 +58,7 @@ Download the repository zip file, unzip and move `_sass-gradient-mixin.scss` (in
 
 Then link to the `_sass-gradients.scss` partial:
 
-```SCSS
+```sass
 @import 'path-to-your-folder/sass-gradient-mixin';
 ```
 
@@ -66,7 +66,7 @@ Then link to the `_sass-gradients.scss` partial:
 
 The Sass Gradient Mixin accepts four variables. These are as follows:
 
-```SCSS
+```sass
 sass-gradient($direction, $reverse, $colors, $fallback);
 ```
 
@@ -105,7 +105,7 @@ For more information and use cases please refer to the [Examples](#examples).
 
 Colors are applied via a Sass map. The key of the map is the percentage and the value is the color.
 
-```scss
+```sass
 $sass-gradient-colors: (
 	percentage: color
 );
