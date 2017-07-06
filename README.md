@@ -70,7 +70,7 @@ The Sass Gradient Mixin accepts four variables. These are as follows:
 sass-gradient($direction, $reverse, $colors, $fallback);
 ```
 
-###$direction
+### $direction
 
 **Type:** string
 
@@ -86,7 +86,7 @@ The following are accepted:
 
 For more information and use cases please refer to the [Examples](#examples).
 
-###$reverse
+### $reverse
 
 **Type:** boolean
 
@@ -99,7 +99,7 @@ The following are accepted:
 
 For more information and use cases please refer to the [Examples](#examples).
 
-###$colors
+### $colors
 
 **Type:** @map
 
@@ -113,7 +113,7 @@ $sass-gradient-colors: (
 
 For more information and use cases please refer to the [Examples](#examples).
 
-###$fallback
+### $fallback
 
 **Type:** color
 
